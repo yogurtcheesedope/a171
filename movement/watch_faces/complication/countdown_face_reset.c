@@ -243,7 +243,7 @@ bool countdown_face_loop(movement_event_t event, movement_settings_t *settings, 
                     pause(state);
                     button_beep(settings);
                     break;
-                case cd_reset:
+                case cd_reset:movement_move_to_face(0);
                 case cd_paused:
                     if (!(state->hours == 0 && state->minutes == 0 && state->seconds == 0)) {
                         // Only start the timer if we have a valid time.
