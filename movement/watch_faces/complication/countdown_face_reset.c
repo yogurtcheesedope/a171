@@ -25,7 +25,7 @@
 
 #include <stdlib.h>
 #include <string.h>
-#include "countdown_face.h"
+#include "countdown_face_reset.h"
 #include "watch.h"
 #include "watch_utility.h"
 
