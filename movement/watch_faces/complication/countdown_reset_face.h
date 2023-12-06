@@ -22,8 +22,8 @@
  * SOFTWARE.
  */
 
-#ifndef countdown_face_reset_H_
-#define countdown_face_reset_H_
+#ifndef countdown_reset_face_H_
+#define countdown_reset_face_H_
 
 /*
  * COUNTDOWN TIMER face
@@ -65,17 +65,17 @@ typedef struct {
 } countdown_state_t;
 
 
-void countdown_face_reset_setup(movement_settings_t *settings, uint8_t watch_face_index, void ** context_ptr);
-void countdown_face_reset_activate(movement_settings_t *settings, void *context);
-bool countdown_face_reset_loop(movement_event_t event, movement_settings_t *settings, void *context);
-void countdown_face_reset_resign(movement_settings_t *settings, void *context);
+void countdown_reset_face_setup(movement_settings_t *settings, uint8_t watch_face_index, void ** context_ptr);
+void countdown_reset_face_activate(movement_settings_t *settings, void *context);
+bool countdown_reset_face_loop(movement_event_t event, movement_settings_t *settings, void *context);
+void countdown_reset_face_resign(movement_settings_t *settings, void *context);
 
-#define countdown_face ((const watch_face_t){ \
-    countdown_face_reset_setup, \
-    countdown_face_reset_activate, \
-    countdown_face_reset_loop, \
-    countdown_face_reset_resign, \
+#define countdown_reset_face ((const watch_face_t){ \
+    countdown_reset_face_setup, \
+    countdown_reset_face_activate, \
+    countdown_reset_face_loop, \
+    countdown_reset_face_resign, \
     NULL, \
 })
 
-#endif // COUNTDOWN_FACE_H_
+#endif // countdown_reset_face_H_
